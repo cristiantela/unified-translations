@@ -1,0 +1,21 @@
+{
+  "name": "unified-translations",
+  "description": "Unify translations in one single file for maintenance and build to separated files.",
+  "keywords": [
+    "translations",
+    "i18n",
+    "unify"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "./index.js",
+  "author": "Matheus Cristian<mathues@email.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node . --translations-file ./example/translations.json --languages pt-br=./example/pt-br.json,en=./example/en.json --mode build",
+    "reverse": "node . --translations-file ./example/translations.json --languages pt-br=./example/pt-br.json,en=./example/en.json --mode reverse"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
