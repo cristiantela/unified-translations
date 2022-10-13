@@ -6,13 +6,13 @@
     "i18n",
     "unify"
   ],
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "index.js",
   "bin": "./index.js",
   "author": "Matheus Cristian <mathues@email.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node . --translations-file ./example/translations.json --languages pt-br=./example/pt-br.json,en=./example/en.json --mode build",
+    "build": "node . --translations-file ./example/translations.json --languages pt-br=./example/pt-br.json,en=./example/en.json --mode build --suggest \"pt-br:pt>en\"",
     "reverse": "node . --translations-file ./example/translations.json --languages pt-br=./example/pt-br.json,en=./example/en.json --mode reverse"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "url": "https://github.com/cristiantela/unified-translations/issues"
   },
   "dependencies": {
+    "@vitalets/google-translate-api": "^8.0.0",
     "lodash": "^4.17.21"
   }
 }
